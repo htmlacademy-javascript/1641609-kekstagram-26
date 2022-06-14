@@ -11,16 +11,16 @@ getRandomInteger(10, 5);
 
 // Если max <= min, то по сути промежуток не меняется. Поэтому, наверное, функция будет вести себя так же.
 //Функция для проверки максимальной длины строки.
-function getTruncateText(line , lineLength) {
-  const maxLength = 140;
-  if (lineLength < maxLength) {
+function getTruncateText(text, maxLength) {
+  maxLength = 140;
+  if (text.length < maxLength) {
     // eslint-disable-next-line no-console
     console.log(true);
-    return lineLength;
+    return text;
   }
 
   // eslint-disable-next-line no-console
   console.log(false);
-  return lineLength;
+  return text;
 }
-getTruncateText(20, 130);
+getTruncateText('меня зовут алия', 140);
